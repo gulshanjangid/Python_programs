@@ -1,19 +1,32 @@
-num_terms = int(input("How many terms? "))
-n1, n2 = 0, 1
-count = 0
-if num_terms <= 0:
-    print("Please enter a positive integer.")
-elif num_terms == 1:
-    print("Fibonacci sequence up to", num_terms, ":")
-    print(n1)
+# num_terms = int(input("How many terms? "))
+# n1, n2 = 0, 1
+# count = 0
+# if num_terms <= 0:
+#     print("Please enter a positive integer.")
+# elif num_terms == 1:
+#     print("Fibonacci sequence up to", num_terms, ":")
+#     print(n1)
+# else:
+#     print("Fibonacci sequence:")
+#     while count < num_terms:
+#         print(n1)
+#         nth = n1 + n2
+#         n1 = n2
+#         n2 = nth
+#         count += 1
+        
+def fibonacci(n):
+    if n<= 1:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+n_terms = int(input("How many terms? "))
+if n_terms <= 0:
+    print("Please enter a positive integer.")   
 else:
     print("Fibonacci sequence:")
-    while count < num_terms:
-        print(n1)
-        nth = n1 + n2
-        n1 = n2
-        n2 = nth
-        count += 1
+    for i in range(n_terms):
+        print(fibonacci(i))
         
 # Fibonacci sequence:
 # The Fibonacci sequence is a series of numbers where each number is the sum of the two
